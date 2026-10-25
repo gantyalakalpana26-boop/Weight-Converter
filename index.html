@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weight Convertor</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        
+        <div class="container">
+            <h1>Weight Convertor</h1><br><br>
+            <form method="post">
+                <label for="weight">Weight : </label>
+                <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
+
+                <label for="unit"> Select Unit : </label>
+                <select id="unit" name="unit" required>
+                    <option value="L">Pounds</option>
+                    <option value="K">Kilos</option>
+                </select>
+            
+                <button type="submit">Convert</button>
+            </form>
+            <h3 id="converted">
+                {{ result if result else "Result will be shown here" }}
+            </h3>
+
+        </div>
+
+    </body>
+</html>
